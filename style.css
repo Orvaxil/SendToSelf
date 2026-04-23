@@ -44,6 +44,10 @@ body {
     cursor: pointer;
 }
 
+.menu-btn {
+    display: none;
+}
+
 /* FILE */
 .file-btn {
     margin-top: 6px;
@@ -264,12 +268,14 @@ body {
 
     /* زر القائمة */
     .menu-btn {
+        display: block;
         font-size: 18px;
-        padding: 5px 10px;
+        padding: 6px 10px;
         background: var(--accent);
         border: none;
         color: white;
         border-radius: 6px;
+        cursor: pointer;
     }
 
     /* ===== SIDEBAR مخفي ===== */
