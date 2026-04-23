@@ -31,6 +31,14 @@ const messages = document.getElementById("messages");
 const modal = document.getElementById("imgModal");
 const modalImg = document.getElementById("modalImg");
 
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.onclick = () => {
+    sidebar.classList.toggle("show");
+};
+
 /* INIT */
 window.addEventListener("DOMContentLoaded", () => {
 
