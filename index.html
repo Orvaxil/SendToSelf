@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Discord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <h3>💬 Rooms</h3>
+
+            <input id="roomInput" placeholder="Room code">
+
+            <button id="joinBtn">Join</button>
+            <button id="createBtn">Create</button>
+
+            <label class="file-btn">
+                📎 Upload Image
+                <input type="file" id="fileInput">
+            </label>
+
+            <button id="themeBtn">🌗 Theme</button>
+
+            <div id="roomsList"></div>
+        </div>
+
+        <!-- CHAT -->
+        <div class="chat">
+
+            <div class="chat-header">
+                <h3 id="roomTitle">No Room</h3>
+
+                <div>
+                    <button id="shareBtn">Share</button>
+                    <button id="leaveBtn">Leave</button>
+                </div>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+            <div class="input-bar">
+                <input id="msgInput" placeholder="Message...">
+                <button id="sendBtn">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- IMAGE MODAL -->
+    <div id="imgModal" class="img-modal">
+        <img id="modalImg">
+    </div>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>
