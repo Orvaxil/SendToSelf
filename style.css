@@ -88,6 +88,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 0;
 }
 
 .chat-header {
@@ -112,6 +113,7 @@ body {
     flex: 1;
     overflow-y: auto;
     padding: 12px;
+    min-height: 0;
 }
 
 /* الرسالة من اليمين */
@@ -166,7 +168,10 @@ body {
     display: flex;
     padding: 10px;
     background: var(--sidebar);
+    flex-shrink: 0;
+    background: var(--sidebar);
 }
+
 
 .input-bar input {
     flex: 1;
@@ -305,14 +310,19 @@ body {
     /* ===== CHAT ===== */
     .chat {
         flex: 1;
+        height: 100%;
         display: flex;
         flex-direction: column;
         min-height: 0;
     }
 
     /* ===== INPUT ===== */
+
     .input-bar {
         padding: 6px;
+        position: sticky;
+        bottom: 0;
+        z-index: 10;
     }
 
     .input-bar input {
@@ -323,6 +333,11 @@ body {
     .input-bar button {
         font-size: 12px;
         padding: 6px 10px;
+    }
+
+    .messages {
+        flex: 1;
+        overflow-y: auto;
     }
 
     /* ===== MESSAGE BUTTONS ===== */
