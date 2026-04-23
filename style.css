@@ -129,6 +129,14 @@ body {
     text-align: right;
 }
 
+.msg img {
+    max-width: 220px;
+    max-height: 220px;
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
 .msg span {
     flex: 1;
 }
@@ -195,6 +203,21 @@ body {
     border-radius: 10px;
 }
 
+.file-btn-inline {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 12px;
+}
+
+.file-btn-inline input {
+    display: none;
+}
+
 html,
 body {
     width: 100%;
@@ -218,10 +241,12 @@ body {
     }
 
     .app {
-        width: 100vw;
+        display: flex;
         height: 100vh;
-        flex-direction: column;
+        overflow: hidden;
     }
+
+
 
     /* ===== NAV TOGGLE AREA ===== */
     .topbar {
@@ -280,7 +305,9 @@ body {
     /* ===== CHAT ===== */
     .chat {
         flex: 1;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
     }
 
     /* ===== INPUT ===== */
@@ -302,6 +329,30 @@ body {
     .msg button {
         font-size: 11px;
         padding: 4px 6px;
+    }
+
+    .msg img {
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    .img-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .img-modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
     }
 
     /* ===== GENERAL BUTTONS SMALL ===== */
