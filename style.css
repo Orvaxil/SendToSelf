@@ -194,3 +194,119 @@ body {
     max-height: 90%;
     border-radius: 10px;
 }
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* يمنع أي تمدد غريب */
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .app {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    /* ===== NAV TOGGLE AREA ===== */
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--sidebar);
+        padding: 8px;
+    }
+
+    /* زر القائمة */
+    .menu-btn {
+        font-size: 18px;
+        padding: 5px 10px;
+        background: var(--accent);
+        border: none;
+        color: white;
+        border-radius: 6px;
+    }
+
+    /* ===== SIDEBAR مخفي ===== */
+    .sidebar {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 70%;
+        height: calc(100% - 50px);
+        background: var(--sidebar);
+        transform: translateX(-100%);
+        transition: 0.3s;
+        z-index: 10;
+        padding: 10px;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    /* ===== ROOMS ===== */
+    #roomsList {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        overflow-y: auto;
+    }
+
+    .room {
+        padding: 8px;
+        font-size: 13px;
+        background: var(--card);
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* ===== CHAT ===== */
+    .chat {
+        flex: 1;
+        height: 100%;
+    }
+
+    /* ===== INPUT ===== */
+    .input-bar {
+        padding: 6px;
+    }
+
+    .input-bar input {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .input-bar button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* ===== MESSAGE BUTTONS ===== */
+    .msg button {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    /* ===== GENERAL BUTTONS SMALL ===== */
+    button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+}
